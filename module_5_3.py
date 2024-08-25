@@ -43,10 +43,12 @@ class House:
         return f"Название: {self.name}, кол-во этажей: {self.number_of_floors}"
 
     def __iadd__(self, other):
+        isinstance(other, int)
         self.number_of_floors += other
         return self
 
     def __radd__(self, other):
+        isinstance(other, int)
         self.number_of_floors += other
         return self
 
